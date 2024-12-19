@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rellotge Temporitzador</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Rellotge Temporitzador</h1>
+    
+    <!-- Rellotge actual -->
+    <div class="clock">
+      <h2>Hora Actual</h2>
+      <div id="current-time">--:--:--</div>
+      <button id="theme-toggle">Activa el Tema Fosc</button>
+    </div>
+    
+    <!-- Temporitzador -->
+    <div class="timer">
+      <h2>Temporitzador</h2>
+      <label for="end-time">Hora de Finalització (HH:MM):</label>
+      <input type="time" id="end-time">
+      
+      <label for="countdown">Compte enrere (en segons):</label>
+      <input type="number" id="countdown" placeholder="Segons">
+
+      <label for="alarm-sound-select">Selecciona el so de l'alarma:</label>
+      <select id="alarm-sound-select">
+        <option value="../sounds/alarmaDigital.mp3">Alarma digital</option>
+        <option value="../sounds/alerta.mp3">Alerta</option>
+        <option value="../sounds/despertadorClassic.mp3">Despertador Clàssic</option>
+        <option value="../sounds/radar.mp3">Radar</option>
+        <option value="../sounds/bomba.mp3">Bomba</option>
+      </select>
+      <audio id="alarm-sound" src="../sounds/alarmaDigital.mp3"></audio>
+      </br>
+      <button id="start-timer">Iniciar Temporitzador</button>
+      <h2>Temps restant: </h2>
+      <div id="time-left">--:--:--</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
